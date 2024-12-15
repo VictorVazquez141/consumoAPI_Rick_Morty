@@ -1,17 +1,7 @@
-// Consumo de api POKEMON con FETCH
-/*Es una manera sencilla de realizar solicitudes HTTP */
-
 // obtener infomración sobre un pokemon
 // url de la api de pokemon
 
 const url = 'https://pokeapi.co/api/v2/pokemon/'
-
-//función que obtiene datos de un pokemon
-// async function gePokemonData(pokemonName){
-//     try{
-//         const 
-//     }
-// }
 
 //obtener datos de un pokemon 
 async function solicitarPokemon(pokemonName){
@@ -29,9 +19,9 @@ async function solicitarPokemon(pokemonName){
         console.log(datos)
 
         //Mostrar información en consola
-        console.log(`Nombre: ${datos.nombre}`)
-        console.log(`Altura: ${datos.altura}`)
-        console.log(`Peso: ${datos.peso}`)
+        console.log(`Nombre: ${datos.name}`)
+        console.log(`Altura: ${datos.height}`)
+        console.log(`Peso: ${datos.weight}`)
         console.log(`Tipos: ${datos.types.map(type => type.type.name).join(',')}`)
     } catch(error){
         console.error(error.message)
@@ -39,5 +29,3 @@ async function solicitarPokemon(pokemonName){
 
 }
 solicitarPokemon("Pikachu")
-
-
